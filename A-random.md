@@ -59,10 +59,20 @@ Jadi begini, setiap kali `rand.Int()` dipanggil, hasilnya itu selalu berbeda, ta
 Coba modifikasi program dengan kode berikut, lalu jalankan ulang. Jangan lupa meng-import package `time` ya.
 
 ```go
-rand.Seed(time.Now().UTC().UnixNano())
-fmt.Println(rand.Int())
-fmt.Println(rand.Int())
-fmt.Println(rand.Int())
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
+	rand.Seed(time.Now().UTC().UnixNano())
+	fmt.Println("random ke-1:", rand.Int())
+	fmt.Println("random ke-2:", rand.Int())
+	fmt.Println("random ke-3:", rand.Int())
+}
 ```
 
 ![Random Golang with unix nano seed](images/A_random_2.png)
