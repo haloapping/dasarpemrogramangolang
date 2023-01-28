@@ -83,9 +83,7 @@ Bisa dilihat, setiap program dieksekusi angka random nya selalu berbeda, hal ini
 
 Di dalam package `math/rand`, ada banyak fungsi untuk generate angka random. Fungsi `rand.Int()` hanya salah satu dari fungsi yang tersedia di dalam package tersebut, yang gunanya adalah menghasilkan angka random bertipe `int`.
 
-Selain itu, ada juga `rand.Float32()` yang menghasilkan angka random bertipe `float32`. Ada juga `rand.Uint32()` yang menghasilkan angka random bertipe *unsigned* int, dan lainnya.
-
-lebih detailnya silakan merujuk ke https://golang.org/pkg/math/rand/
+Selain itu, ada juga `rand.Float32()` yang menghasilkan angka random bertipe `float32`. Ada juga `rand.Uint32()` yang menghasilkan angka random bertipe *unsigned* int, dan lainnya. Lebih detailnya silakan merujuk ke https://golang.org/pkg/math/rand/
 
 ## A.39.5. Angka Random Index Tertentu
 
