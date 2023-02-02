@@ -4,15 +4,15 @@ Pada bagian ini kita akan belajar cara pemanfaatan vendoring untuk menyimpan dep
 
 ## A.61.1. Penjelasan
 
-Vendoring di Go merupakan kapabilitas untuk mengunduh semua dependency atau *3rd party*, untuk disimpan di lokal dalam folder project, dalam folder bernama `vendor`.
+Vendoring di Go merupakan kapabilitas untuk mengunduh semua dependency atau _3rd party_, untuk disimpan di lokal dalam folder project, dalam folder bernama `vendor`.
 
-Dengan adanya folder tersebut, maka Go tidak akan *lookup* 3rd party ke cache folder, melainkan langsung mempergunakan yang ada dalam folder `vendor`. Jadi tidak perlu download lagi dari internet.
+Dengan adanya folder tersebut, maka Go tidak akan _lookup_ 3rd party ke cache folder, melainkan langsung mempergunakan yang ada dalam folder `vendor`. Jadi tidak perlu download lagi dari internet.
 
 Ok lanjut.
 
 ## A.61.2. Praktek Vendoring
 
-Kita akan coba praktekan untuk vendoring sebuah 3rd party bernama [gubrak](https://github.com/novalagung/gubrak/v2).
+Kita akan coba praktekan untuk vendoring sebuah 3rd party bernama [gubrak](https://github.com/novalagung/gubrak).
 
 Buat folder project baru dengan nama `belajar-vendor` dengan isi satu file `main.go`. Lalu go get library gubrak.
 
@@ -38,11 +38,11 @@ func main() {
 }
 ```
 
-Setelah itu jalankan command `go mod vendor` untuk vendoring *3rd party library* yang dipergunakan, dalam contoh ini adlah gubrak.
+Setelah itu jalankan command `go mod vendor` untuk vendoring _3rd party library_ yang dipergunakan, dalam contoh ini adlah gubrak.
 
 ![Vendoring](images/A_go_vendoring_1_vendor.png)
 
-Bisa dilihat, sekarang library gubrak *source code*-nya disimpan dalam folder `vendor`. Nah ini juga akan berlaku untuk semua *library* lainnya yg digunakan jika ada.
+Bisa dilihat, sekarang library gubrak _source code_-nya disimpan dalam folder `vendor`. Nah ini juga akan berlaku untuk semua _library_ lainnya yg digunakan jika ada.
 
 ## A.61.3 Build dan Run Project yang Menerapkan Vendoring
 
@@ -62,7 +62,7 @@ go build -mod=vendor -o executable
 
 ## A.61.3. Manfaat Vendoring
 
-Manfaat vendoring adalah pada sisi kompatibilitas dan kestabilan 3rd party. Jadi dengan vendor, misal 3rd party yang kita gunakan di itu ada update yg sifatnya tidak *backward compatible*, maka aplikasi kita tetap aman karena menggunakan yang ada dalam folder `vendor`.
+Manfaat vendoring adalah pada sisi kompatibilitas dan kestabilan 3rd party. Jadi dengan vendor, misal 3rd party yang kita gunakan di itu ada update yg sifatnya tidak _backward compatible_, maka aplikasi kita tetap aman karena menggunakan yang ada dalam folder `vendor`.
 
 Jika tidak menggunakan vendoring, maka bisa saja saat `go mod tidy` sukses, namun sewaktu build error, karena ada fungsi yg tidak kompatibel lagi misalnya.
 
